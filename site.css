@@ -2,10 +2,10 @@
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    font-family: "MenschRegular", "helvetica", arial, sans-serif;
 }
 body{
 	margin: 0;
+	font-family: "verdana", "Trebuchet MS", Helvetica, arial, sans-serif;
 }
 p{
     font-size: 12px;
@@ -45,9 +45,8 @@ input:-moz-placeholder {
 
 .container{
 	width: 1400px;
-	max-width: 100%;
+	max-width: 95%;
 	margin: 0 auto;
-	padding: 0 20px;
 	margin-top: 20px
 }
 
@@ -73,9 +72,10 @@ input:-moz-placeholder {
 	color: white;
 	text-align: center;
 	font-weight: bolder;
-	font-size: 23px;
+	font-size: 30px;
 	line-height: 100px;
 	display: inline-block;
+	font-family: helvetica;
 }
 
 .clearfix:after{
@@ -237,15 +237,19 @@ input:-moz-placeholder {
 	line-height: 20px;
 	margin-right: 20%;
 }
+.bottomMenu .copyright a{
+	color:  #3accee;
+}
+.bottomMenu .copyright a:hover{
+	color: #49d0ee;
+
+}
 
 
 
 
 
 @media only screen and (max-width: 1000px){
-	.container{
-		padding: 0 20px;
-	}
 	.input{
 		display: none;
 	}
