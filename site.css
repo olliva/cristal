@@ -284,6 +284,11 @@ input:-moz-placeholder {
 		border: none;
 		background-color: #1ec8ed;
 		border-radius: 5px;
+		-moz-border-radius: 5px;
+	    -webkit-border-radius: 5px;
+	    -o-border-radius: 5px;
+	    -khtml-border-radius: 5px;
+		behavior: url("border-radius.htc");
 		margin: 1px 0;
 		font-size: 16px;
 	}
