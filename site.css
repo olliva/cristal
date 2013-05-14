@@ -139,7 +139,12 @@ input:-moz-placeholder {
 	margin: 40px 0;
 	position: relative;
 }
-
+.content .sticks{
+	width: 100%;
+	height: 100%;
+	background: url(sticks.png) no-repeat;
+	background-position: 48% 100px;
+}
 .content .leftTopText{
 	width: 40%;
 	position: absolute;
@@ -317,7 +322,9 @@ input:-moz-placeholder {
 		width: 100%;
 	}
 
-
+	.content .sticks{
+		display: none;
+	}
 	.content .textBackground{
 		height: 100%;
 		position: absolute;
