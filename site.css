@@ -198,6 +198,8 @@ input:-moz-placeholder {
 }
 .content .smallUnderContentText{
 	display: none;
+	position: relative;
+
 }
 
 
