@@ -105,12 +105,18 @@ input:-moz-placeholder {
 	border-left: 1px solid #e7e7e7;
 	line-height: 50px;
 	font-size: 15px;
+	vertical-align: middle;
 }
-.header .headerMenu ul a:first-child li{
+.header .headerMenu ul li.bigText{
+	line-height: 25px;
+	width: 200px;
+}
+.header .headerMenu ul li:first-child {
 	border-color: transparent;
 }
 .header .headerMenu ul a {
 	color: #1ec8ed;
+	display: block;
 }
 .header .headerMenu ul a:hover{
 	color: #49d0ee;
@@ -214,7 +220,7 @@ input:-moz-placeholder {
 .bottomMenu ul{
 	list-style-type: none;
 	float: left;
-
+	padding: 0;
 }
 .bottomMenu ul a{
 	color: #3accee;
@@ -226,10 +232,10 @@ input:-moz-placeholder {
 	display: inline-block;
 	line-height: 20px;
 	border-left: 1px solid #cccccc;
-	padding: 0 20px;
+	padding: 0 10px;
 	font-size: 12px;
 }
-.bottomMenu ul a:first-child li{
+.bottomMenu ul li:first-child {
 	padding-left: 0;
 	border: none;
 }
@@ -282,15 +288,20 @@ input:-moz-placeholder {
 		font-size: 16px;
 	}
 	.header .headerMenu ul a{
-		display: inherit;
+		display: block;
 		color: white;
 	}
-	.header .headerMenu ul a:hover{
-		color: white;
-	}
-	.header .headerMenu ul a:hover li{
+	.header .headerMenu ul li:hover {
 		background-color: #49d0ee;
 	}
+	.header .headerMenu ul li:hover a{
+		color: white;
+	}
+	.header .headerMenu ul li.bigText{
+		line-height: 50px;
+		width: 100%;
+	}
+
 
 	.content .textBackground{
 		height: 100%;
@@ -345,6 +356,18 @@ input:-moz-placeholder {
 		margin: 0;
 	}
 }
+@media only screen and (max-width: 710px){
+	.bottomMenu .copyright{
+		padding-top: 20px;
+		float: none;
+		text-align: center;
+	}
+	.bottomMenu ul{
+		float: none;
+		text-align: center;
+		padding: 0
+	}
+}
 @media only screen and (max-width: 631px){
 	.content{
 		height: 100%;
@@ -369,15 +392,13 @@ input:-moz-placeholder {
 		margin: 0;
 	}
 
-	.bottomMenu ul{
-		float: none;
-		text-align: center;
+	.bottomMenu ul li{
+		border: none;
+		display: block;
+		padding: 7px 0;
 	}
-	.bottomMenu .copyright{
-		text-align: center;
-		float: none;
-		padding-top: 20px;
-	}
+
+
 
 
 }
