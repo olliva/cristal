@@ -54,7 +54,7 @@ input:-moz-placeholder {
 
 .input input{
 	width: 25%;
-	height: 20px;
+	height: 24px;
 	border-radius: 5px;
 	border: 1px solid #cccccc;
 	padding: 5px 15px;
@@ -251,7 +251,7 @@ input:-moz-placeholder {
 	}
 	.header .logo{
 		display: inherit;
-		margin-top: 40px;
+		margin-top: 44px;
 	}
 	.header .headerMenu {
 		float: none;
