@@ -39,7 +39,7 @@ input::-webkit-input-placeholder {
 input:-moz-placeholder {
 	font-size: 11px;
 	color: #cecece;
-	font-style:italic;
+	font-style: italic;
 	font-weight: lighter;
 }
 
@@ -57,7 +57,7 @@ input:-moz-placeholder {
 	height: 24px;
 	border-radius: 5px;
 	border: 1px solid #cccccc;
-	padding: 5px 15px;
+	padding: 8px 15px;
 	float: right;
 
 }
