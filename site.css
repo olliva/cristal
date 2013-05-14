@@ -60,6 +60,11 @@ input:-moz-placeholder {
 	border: 1px solid #cccccc;
 	padding: 3px 15px;
 	float: right;
+	-moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -o-border-radius: 5px;
+    -khtml-border-radius: 5px;
+	behavior: url("border-radius.htc");
 
 }
 
@@ -72,6 +77,11 @@ input:-moz-placeholder {
 	width: 250px;
 	background-color: #1ec8ed;
 	border-radius: 5px;
+	-moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -o-border-radius: 5px;
+    -khtml-border-radius: 5px;
+	behavior: url("border-radius.htc");
 	color: white;
 	text-align: center;
 	font-weight: bolder;
