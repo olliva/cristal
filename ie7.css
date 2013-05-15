@@ -1,8 +1,11 @@
-.content .leftBottomText p{
-	width: 60%;
-}
+
 .rW{
-	display: none;
+	display: inline;
+	height: 15px;
+}
+.lW{
+	display: inline;
+	height: 15px;
 }
 @media only screen and (max-width: 1000px){
 	.content .leftBottomText p{
