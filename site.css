@@ -174,7 +174,6 @@ input:-moz-placeholder {
 	width: 41%;
 	position: absolute;
 	top: 435px;
-	overflow: hidden;
 }
 .content .rightBottomText{
 	width: 24%;
@@ -182,7 +181,6 @@ input:-moz-placeholder {
 	position: absolute;
 	bottom: 30px;
 	right: 0;
-	overflow: hidden;
 }
 .underContentText{
 	padding-top: 30px;
@@ -324,6 +322,7 @@ input:-moz-placeholder {
 		left: 0;
 		top: 0;
 		text-align: left;
+		overflow: hidden;
 	}
 	.content .rightText p{
 		padding-left: 10px;
@@ -341,6 +340,7 @@ input:-moz-placeholder {
 		display: inline-block;
 		zoom: 1;
 		*display: inline;
+		overflow: hidden;
 
 	}
 	.content .smallUnderContentText{
