@@ -124,7 +124,7 @@ input:-moz-placeholder {
 }
 .header .headerMenu ul li.bigText{
 	line-height: 25px;
-	width: 160px;
+	width: 170px;
 }
 .header .headerMenu ul li:first-child {
 	border-color: transparent;
@@ -355,9 +355,6 @@ input:-moz-placeholder {
 		left: 0;
 		top: 0;
 		text-align: left;
-		display: inline-block;
-		zoom: 1;
-		*display: inline;
 	}
 	.content .rightText p{
 		padding-left: 10px;
