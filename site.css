@@ -181,7 +181,7 @@ input:-moz-placeholder {
 	width: 25%;
 	text-align: left;
 	position: absolute;
-	bottom: 30px;
+	bottom: 7px;
 	right: 0;
 	z-index: 3;
 }
@@ -249,6 +249,7 @@ input:-moz-placeholder {
 @media only screen and (min-width: 1200px){
 	.content .rightBottomText{
 		width: 30%;
+		bottom: 30px;
 	}
 
 }
