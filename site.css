@@ -58,14 +58,17 @@ input:-moz-placeholder {
 	height: 24px;
 	border-radius: 5px;
 	border: 1px solid #cccccc;
+	border-style:solid;
+ 	border-width:1px;
+ 	border-color: #cccccc;
 	padding: 3px 15px;
 	float: right;
-	-moz-border-radius: 5px;
+	/*-moz-border-radius: 5px;
     -webkit-border-radius: 5px;
     -o-border-radius: 5px;
     -khtml-border-radius: 5px;
 	behavior: url("border-radius.htc");
-
+*/
 }
 
 
@@ -78,11 +81,11 @@ input:-moz-placeholder {
 	width: 250px;
 	background-color: #1ec8ed;
 	border-radius: 5px;
-	-moz-border-radius: 5px;
+	/*-moz-border-radius: 5px;
     -webkit-border-radius: 5px;
     -o-border-radius: 5px;
     -khtml-border-radius: 5px;
-	behavior: url("border-radius.htc");
+	behavior: url("border-radius.htc");*/
 	color: white;
 	text-align: center;
 	font-weight: bolder;
@@ -307,11 +310,11 @@ input:-moz-placeholder {
 		border: none;
 		background-color: #1ec8ed;
 		border-radius: 5px;
-		-moz-border-radius: 5px;
+		/*-moz-border-radius: 5px;
 	    -webkit-border-radius: 5px;
 	    -o-border-radius: 5px;
 	    -khtml-border-radius: 5px;
-		behavior: url("border-radius.htc");
+		behavior: url("border-radius.htc");*/
 		margin: 1px 0;
 		font-size: 16px;
 	}
