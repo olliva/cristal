@@ -168,7 +168,7 @@ input:-moz-placeholder {
 	width: 28%;
 	text-align: right;
 	position: absolute;
-	left: 53%;
+	left: 52%;
 	top: 20px;
 }
 .content .leftBottomText{
@@ -177,7 +177,7 @@ input:-moz-placeholder {
 	top: 435px;
 }
 .content .rightBottomText{
-	width: 24%;
+	width: 25%;
 	text-align: left;
 	position: absolute;
 	bottom: 30px;
