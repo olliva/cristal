@@ -329,6 +329,7 @@ input:-moz-placeholder {
 		display: inline-block;
 		zoom: 1;
 		*display: inline;
+		vertical-align: top;
 	}
 	.content .rightText p{
 		padding-left: 10px;
