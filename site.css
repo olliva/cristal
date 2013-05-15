@@ -63,12 +63,12 @@ input:-moz-placeholder {
  	border-color: #cccccc;
 	padding: 3px 15px;
 	float: right;
-	/*-moz-border-radius: 5px;
+	-moz-border-radius: 5px;
     -webkit-border-radius: 5px;
     -o-border-radius: 5px;
     -khtml-border-radius: 5px;
 	behavior: url("border-radius.htc");
-*/
+
 }
 
 
@@ -81,11 +81,11 @@ input:-moz-placeholder {
 	width: 250px;
 	background-color: #1ec8ed;
 	border-radius: 5px;
-	/*-moz-border-radius: 5px;
+	-moz-border-radius: 5px;
     -webkit-border-radius: 5px;
     -o-border-radius: 5px;
     -khtml-border-radius: 5px;
-	behavior: url("border-radius.htc");*/
+	behavior: url("border-radius.htc");
 	color: white;
 	text-align: center;
 	font-weight: bolder;
@@ -159,17 +159,7 @@ input:-moz-placeholder {
 	position: absolute;
 	top: 20px;
 }
-.content .leftTopLine{
-	width: 100px;
-	position: absolute;
-	height: 1px;
-	background-color: #8b8b8b;
-	top: 130px;
-	left: 31%;
-	transform: rotate(30deg);
-	-ms-transform: rotate(30deg); /* IE 9 */
-	-webkit-transform: rotate(30deg); /* Safari and Chrome */
-}
+
 .content .rightTopText{
 	width: 26%;
 	text-align: right;
@@ -177,33 +167,13 @@ input:-moz-placeholder {
 	left: 53%;
 	top: 20px;
 }
-.content .rightTopLine{
-	width: 67px;
-	position: absolute;
-	height: 1px;
-	background-color: #8b8b8b;
-	right: 40%;
-	top: 110px;
-	transform: rotate(-60deg);
-	-ms-transform: rotate(-60deg); /* IE 9 */
-	-webkit-transform: rotate(-60deg); /* Safari and Chrome */
-}
+
 .content .leftBottomText{
 	width: 41%;
 	position: absolute;
 	top: 435px;
 }
-.content .leftBottomLine{
-	width: 100px;
-	position: absolute;
-	height: 1px;
-	background-color: #8b8b8b;
-	left: 24%;
-	bottom: 160px;
-	transform: rotate(-40deg);
-	-ms-transform: rotate(-40deg); /* IE 9 */
-	-webkit-transform: rotate(-40deg); /* Safari and Chrome */
-}
+
 .content .rightBottomText{
 	width: 24%;
 	text-align: left;
@@ -212,18 +182,7 @@ input:-moz-placeholder {
 	right: 0;
 
 }
-.content .rightBottomLine{
-	width: 140px;
-	position: absolute;
-	height: 1px;
-	background-color: #8b8b8b;
-	right: 26%;
-	bottom: 147px;
-	transform: rotate(26deg);
-	-ms-transform: rotate(26deg); /* IE 9 */
-	-webkit-transform: rotate(26deg); /* Safari and Chrome */
 
-}
 .underContentText{
 	padding-top: 30px;
 	position: relative;
@@ -310,11 +269,11 @@ input:-moz-placeholder {
 		border: none;
 		background-color: #1ec8ed;
 		border-radius: 5px;
-		/*-moz-border-radius: 5px;
+		-moz-border-radius: 5px;
 	    -webkit-border-radius: 5px;
 	    -o-border-radius: 5px;
 	    -khtml-border-radius: 5px;
-		behavior: url("border-radius.htc");*/
+		behavior: url("border-radius.htc");
 		margin: 1px 0;
 		font-size: 16px;
 	}
