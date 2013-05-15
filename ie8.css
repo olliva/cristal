@@ -1,0 +1,9 @@
+.header .logo{
+	-khtml-border-radius: 5px;
+	behavior: url("border-radius.htc");
+}
+
+@media only screen and (max-width: 1000px){
+	-khtml-border-radius: 5px;
+	behavior: url("border-radius.htc");
+}

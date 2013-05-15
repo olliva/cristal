@@ -90,8 +90,6 @@ input:-moz-placeholder {
 	-moz-border-radius: 5px;
     -webkit-border-radius: 5px;
     -o-border-radius: 5px;
-    -khtml-border-radius: 5px;
-	behavior: url("border-radius.htc");
 	color: white;
 	text-align: center;
 	font-weight: bolder;
@@ -276,8 +274,6 @@ input:-moz-placeholder {
 		-moz-border-radius: 5px;
 	    -webkit-border-radius: 5px;
 	    -o-border-radius: 5px;
-	    -khtml-border-radius: 5px;
-		behavior: url("border-radius.htc");
 		margin: 1px 0;
 		font-size: 16px;
 		padding: 0;
