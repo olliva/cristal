@@ -1,6 +1,4 @@
-.content .leftBottomText p{
-	width: 60%;
-}
+
 .lW,
 .rW{
 	display: none;
@@ -10,6 +8,9 @@
 }
 .content .rightTopText{
 	left: 54%;
+}
+.content .leftBottomText{
+	width: 22%;
 }
 @media only screen and (max-width: 1000px){
 	.content .leftBottomText p{
