@@ -8,6 +8,9 @@
 .content .leftTopText{
 	width: 36%;
 }
+.content .rightTopText{
+	left: 54%;
+}
 @media only screen and (max-width: 1000px){
 	.content .leftBottomText p{
 		width: 100%;
