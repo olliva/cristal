@@ -107,6 +107,7 @@ input:-moz-placeholder {
 	position: absolute;
 	bottom: 0;
 	right: 0;
+	overflow: hidden;
 }
 .header .headerMenu ul{
 	list-style-type: none;
