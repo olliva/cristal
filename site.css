@@ -357,6 +357,8 @@ input:-moz-placeholder {
 	.content .topText{
 		padding-top: 65px;
 		margin-bottom: 50px;
+		position: relative;
+		zoom: 1;
 	}
 	.content .rightText{
 		float: right;
@@ -372,6 +374,8 @@ input:-moz-placeholder {
 	}
 	.content .bottomText{
 		margin-bottom: 50px;
+		position: relative;
+		zoom: 1;
 	}
 	.content .leftText{
 		width: 49%;
