@@ -319,7 +319,6 @@ input:-moz-placeholder {
 		zoom: 1;
 	}
 	.content .rightText{
-		float: right;
 		width: 49%;
 		position: relative;
 		zoom:1;
@@ -327,6 +326,9 @@ input:-moz-placeholder {
 		top: 0;
 		text-align: left;
 		overflow: hidden;
+		display: inline-block;
+		zoom: 1;
+		*display: inline;
 	}
 	.content .rightText p{
 		padding-left: 10px;
@@ -345,6 +347,7 @@ input:-moz-placeholder {
 		zoom: 1;
 		*display: inline;
 		overflow: hidden;
+		margin-right: 2%;
 
 	}
 	.content .smallUnderContentText{
