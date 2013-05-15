@@ -53,6 +53,10 @@ input:-moz-placeholder {
 	margin-top: 20px
 }
 
+.input{
+	position: relative;
+	zoom: 1;
+}
 
 .input input{
 	width: 25%;
@@ -75,7 +79,7 @@ input:-moz-placeholder {
 
 .header{
 	position: relative;
-	margin-top: 20px;
+	margin-top: 0px;
 	zoom:1;
 }
 .header .logo{
@@ -125,12 +129,12 @@ input:-moz-placeholder {
 	padding: 0 15px;
 	border-left: 1px solid #e7e7e7;
 	line-height: 50px;
-	font-size: 15px;
+	font-size: 14px;
 	vertical-align: middle;
 }
 .header .headerMenu ul li.bigText{
 	line-height: 25px;
-	width: 170px;
+	width: 160px;
 }
 .header .headerMenu ul li:first-child {
 	border-color: transparent;
