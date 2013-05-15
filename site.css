@@ -87,11 +87,11 @@ input:-moz-placeholder {
 	width: 250px;
 	background-color: #1ec8ed;
 	border-radius: 5px;
-	/*-moz-border-radius: 5px;
+	-moz-border-radius: 5px;
     -webkit-border-radius: 5px;
     -o-border-radius: 5px;
     -khtml-border-radius: 5px;
-	behavior: url("border-radius.htc");*/
+	behavior: url("border-radius.htc");
 	color: white;
 	text-align: center;
 	font-weight: bolder;
@@ -104,9 +104,9 @@ input:-moz-placeholder {
 }
 
 .clearfix:after{
-        clear: both;
-        content: " ";
-        display: block;
+    clear: both;
+    content: " ";
+    display: block;
 }
 
 .header .headerMenu {
@@ -134,7 +134,7 @@ input:-moz-placeholder {
 }
 .header .headerMenu ul li.bigText{
 	line-height: 25px;
-	width: 160px;
+	width: 161px;
 }
 .header .headerMenu ul li:first-child {
 	border-color: transparent;
@@ -168,7 +168,7 @@ input:-moz-placeholder {
 	top: 20px;
 }
 .content .rightTopText{
-	width: 26%;
+	width: 25%;
 	text-align: right;
 	position: absolute;
 	left: 53%;
