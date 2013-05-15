@@ -14,6 +14,7 @@ p{
     color: #585858;
     line-height: 20px;
     position: relative;
+    zoom:1;
 
 
 }
@@ -75,6 +76,7 @@ input:-moz-placeholder {
 .header{
 	position: relative;
 	margin-top: 20px;
+	zoom:1;
 }
 .header .logo{
 	height: 100px;
@@ -147,6 +149,7 @@ input:-moz-placeholder {
 	height: 631px;
 	margin: 40px 0;
 	position: relative;
+	zoom:1;
 }
 .content .sticks{
 	width: 100%;
@@ -229,10 +232,12 @@ input:-moz-placeholder {
 	padding-top: 30px;
 	position: relative;
 	margin-bottom: 100px;
+	zoom:1;
 }
 .content .smallUnderContentText{
 	display: none;
 	position: relative;
+	zoom:1;
 
 }
 
@@ -300,6 +305,7 @@ input:-moz-placeholder {
 		float: none;
 		display: inherit;
 		position: relative;
+		zoom:1;
 	}
 	.header .headerMenu ul{
 		border-bottom: none;
@@ -356,6 +362,7 @@ input:-moz-placeholder {
 		float: right;
 		width: 49%;
 		position: relative;
+		zoom:1;
 		left: 0;
 		top: 0;
 		text-align: left;
