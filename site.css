@@ -47,8 +47,8 @@ input:-moz-placeholder {
 }
 
 .container{
-	max-width: 1400px;
-	padding: 0 50px;
+	width: 1400px;
+	max-width: 95%;
 	margin: 0 auto;
 	margin-top: 20px
 }
@@ -246,7 +246,12 @@ input:-moz-placeholder {
 
 
 
+@media only screen and (max-width: 1200px){
+	.content .rightBottomText{
+		width: 30%;
+	}
 
+}
 @media only screen and (max-width: 1000px){
 	.lW, .rW{
 		display: none;
