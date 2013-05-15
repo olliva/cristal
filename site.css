@@ -282,6 +282,7 @@ input:-moz-placeholder {
 		behavior: url("border-radius.htc");
 		margin: 1px 0;
 		font-size: 16px;
+		padding: 0;
 	}
 	.header .headerMenu ul a{
 		display: block;
