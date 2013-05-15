@@ -284,7 +284,7 @@ input:-moz-placeholder {
 
 
 
-/*@media only screen and (max-width: 1000px){*/
+@media only screen and (max-width: 1000px){
 	.lW, .rW{
 		display: none;
 	}
@@ -391,7 +391,7 @@ input:-moz-placeholder {
 		float: right;
 		margin: 0;
 	}
-/*}*/
+}
 @media only screen and (max-width: 710px){
 	.bottomMenu .copyright{
 		padding-top: 20px;
