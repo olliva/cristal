@@ -113,7 +113,6 @@ input:-moz-placeholder {
 	position: absolute;
 	bottom: 0;
 	right: 0;
-	overflow: hidden;
 }
 .header .headerMenu ul{
 	list-style-type: none;
@@ -270,7 +269,6 @@ input:-moz-placeholder {
 		padding: 40px 0;
 	}
 	.header .headerMenu ul li{
-		display: inherit;
 		width: 100%;
 		border: none;
 		background-color: #1ec8ed;
