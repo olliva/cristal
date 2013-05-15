@@ -88,6 +88,8 @@ input:-moz-placeholder {
 	font-size: 30px;
 	line-height: 100px;
 	display: inline-block;
+	zoom: 1;
+	*display: inline;
 	font-family: helvetica;
 }
 
@@ -110,6 +112,8 @@ input:-moz-placeholder {
 }
 .header .headerMenu ul li{
 	display: inline-block;
+	zoom: 1;
+	*display: inline;
 	height: 50px;
 	padding: 0 15px;
 	border-left: 1px solid #e7e7e7;
@@ -246,6 +250,8 @@ input:-moz-placeholder {
 }
 .bottomMenu ul li{
 	display: inline-block;
+	zoom: 1;
+	*display: inline;
 	line-height: 20px;
 	border-left: 1px solid #cccccc;
 	padding: 0 10px;
@@ -349,6 +355,8 @@ input:-moz-placeholder {
 		top: 0;
 		text-align: left;
 		display: inline-block;
+		zoom: 1;
+		*display: inline;
 	}
 	.content .rightText p{
 		padding-left: 10px;
@@ -362,10 +370,14 @@ input:-moz-placeholder {
 		bottom: 0;
 		top: 0;
 		display: inline-block;
+		zoom: 1;
+		*display: inline;
 
 	}
 	.content .smallUnderContentText{
 		display: inline-block;
+		zoom: 1;
+		*display: inline;
 		margin-bottom: 0;
 		padding-top: 0;
 	}
