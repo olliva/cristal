@@ -237,6 +237,7 @@ input:-moz-placeholder {
 }
 .bottomMenu .copyright a{
 	color:  #3accee;
+	text-decoration: underline;
 }
 .bottomMenu .copyright a:hover{
 	color: #49d0ee;
