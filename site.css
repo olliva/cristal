@@ -8,7 +8,7 @@ body{
 	font-family: "verdana", "Trebuchet MS", Helvetica, arial, sans-serif;
 }
 p{
-    font-size: 11px;
+    font-size: 10px;
     line-height: 20px;
     color: #585858;
     line-height: 20px;
@@ -154,9 +154,9 @@ input:-moz-placeholder {
 .backgroundImage{
 	height: 631px;
 	position: absolute;
-	margin-top: -465px;
+	margin-top: -525px;
 	background: url(sticks.png) no-repeat, url(figure.png) no-repeat;
-	background-position: 45% center;
+	background-position: 40% center;
 	width: 100%;
 
 }
@@ -165,6 +165,7 @@ input:-moz-placeholder {
 	position: relative;
 	z-index: 6;
 	margin-bottom: 240px;
+	margin-top: 60px;
 }
 .bottomText{
 	min-height: 316px;
@@ -177,7 +178,7 @@ input:-moz-placeholder {
 	float: left;
 }
 .content .rightTopText{
-	width: 21%;
+	width: 24%;
 	text-align: right;
 	position: relative;
 	float: right;
