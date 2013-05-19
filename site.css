@@ -168,7 +168,7 @@ input:-moz-placeholder {
 	margin-top: 60px;
 }
 .bottomText{
-	min-height: 316px;
+	min-height: 220px;
 	position: relative;
 	z-index: 5;
 }
@@ -333,6 +333,7 @@ input:-moz-placeholder {
 		position: relative;
 		zoom: 1;
 		margin-top: 0px;
+		min-height: 0px;
 	}
 	.content .rightText{
 		width: 49%;
@@ -358,6 +359,7 @@ input:-moz-placeholder {
 		margin-bottom: 50px;
 		position: relative;
 		zoom: 1;
+		min-height: 0px;
 	}
 	.content .leftText{
 		width: 49%;
@@ -384,8 +386,8 @@ input:-moz-placeholder {
 
 
 	.bottomMenu .copyright{
-		float: right;
 		margin: 0;
+		width: auto;
 	}
 }
 @media only screen and (max-width: 710px){
