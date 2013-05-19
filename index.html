@@ -19,7 +19,38 @@
 	<![endif]-->
 	<script type="text/javascript">
 	$(function(){
+		function allignLinesBottom(element, count, className){
+			var oldTopLeftHeight = element.height();
+			var topLeftMarginTop = element.height() - count*15;
+			element.find(className).first().css({"margin-top": topLeftMarginTop + "px"});
+			if((element.height() > element.find(".text").height()) && (topLeftMarginTop !=0)&&(className == ".rW")) {
+				element.find(className).first().css({"margin-top": topLeftMarginTop - element.height() + element.find(".text").height() + 40 + "px"});
+			}
+			else if((element.height() > element.find(".text").height()) && (topLeftMarginTop ==0) ){
+				element.find(".text").css({"margin-top": element.height() - element.find(".text").height() - 80 + "px"});
+			}
+
+		}
+		function topTextsAllign(){
+			if($(".rightTopText").height() < $(".leftTopText").height()){
+				$(".rightTopText").css({"margin-top": $(".leftTopText").height() - $(".rightTopText").height() + "px"});
+			}
+			else{
+				$(".leftTopText").css({"margin-top": $(".rightTopText").height() - $(".leftTopText").height() + "px"});
+			}
+		}
+		allignLinesBottom($(".leftTopText"), 16, ".rW");
+		allignLinesBottom($(".rightTopText"), 13, ".lW");
+		topTextsAllign();
 		$(".underContentText").html($(".smallUnderContentText").html());
+
+
+		$(window).resize(function(){
+			$(".underContentText").html($(".smallUnderContentText").html());
+			allignLinesBottom($(".leftTopText"), 16, ".rW");
+			allignLinesBottom($(".rightTopText"), 13, ".lW");
+			topTextsAllign();
+		})
 	});
 	</script>
     <body>
@@ -41,11 +72,10 @@
     			</div>
     		</div>
     		<div class="content">
-    			<div class="sticks"></div>
-    			<div class="topText">
+    			<div class="topText clearfix">
 	    			<div class="leftTopText leftText clearfix">
 	    				<div class="textBackground"></div>
-	    				<div class="rW" style="width:10px;"></div>
+	    				<div class="rW rWTopLeft" style="width:10px;"></div>
 						<div class="rW" style="width:29px;"></div>
 						<div class="rW" style="width:48px;"></div>
 						<div class="rW" style="width:68px;"></div>
@@ -61,18 +91,10 @@
 						<div class="rW" style="width:261px;"></div>
 						<div class="rW" style="width:281px;"></div>
 						<div class="rW" style="width:300px;"></div>
-						<div class="rW" style="width:0px;"></div>
-						<div class="rW" style="width:0px;"></div>
-						<div class="rW" style="width:0px;"></div>
-						<div class="rW" style="width:0px;"></div>
-						<div class="rW" style="width:0px;"></div>
-						<div class="rW" style="width:0px;"></div>
-	    				<p>Большую роль в популяризации психодрамы сыграл институт социометрии, который абстракция отражает объект, на что указывают и многие другие факторы. "кодекс деяний" изящно трансформирует закон исключённого третьего, на что указывают и многие другие факторы. </p>
+	    				<div class="text"><p>Большую роль в популяризации психодрамы сыграл институт социометрии, который абстракция отражает объект, на что указывают и многие другие факторы. "кодекс деяний" изящно трансформирует закон исключённого третьего, на что указывают и многие другие факторы.</p></div>
 	    			</div>
 	    			<div class="rightTopText rightText clearfix">
 	    				<div class="textBackground"></div>
-	    				<div class="lW" style="width:0px;"></div>
-						<div class="lW" style="width:0px;"></div>
 						<div class="lW" style="width:35px;"></div>
 						<div class="lW" style="width:49px;"></div>
 						<div class="lW" style="width:63px;"></div>
@@ -86,17 +108,12 @@
 						<div class="lW" style="width:174px;"></div>
 						<div class="lW" style="width:188px;"></div>
 						<div class="lW" style="width:202px;"></div>
-						<div class="lW" style="width:0px;"></div>
-						<div class="lW" style="width:0px;"></div>
-						<div class="lW" style="width:0px;"></div>
-						<div class="lW" style="width:0px;"></div>
-						<div class="lW" style="width:0px;"></div>
-						<div class="lW" style="width:0px;"></div>
-						<div class="lW" style="width:0px;"></div>
-	    				<p>Тоталитарный тип политической культуры, по определению, слабопроницаем. Понятие политического конфликта амбивалентно.</p>
+	    				<div class="text"><p>Тоталитарный тип политической культуры, по определению, слабопроницаем. Понятие политического конфликта амбивалентно.</p></div>
 	    			</div>
 	    		</div>
-	    		<div class="bottomText">
+	    		<div class="bottomText clearfix">
+	    			<div class="backgroundImage">
+	    				</div>
 	    			<div class="leftBottomText leftText clearfix">
 	    				<div class="textBackground"></div>
 	    				<div class="rW" style="width:236px;"></div>
@@ -119,19 +136,17 @@
 						<div class="rW" style="width:42px;"></div>
 						<div class="rW" style="width:31px;"></div>
 						<div class="rW" style="width:20px;"></div>
-						<div class="rW" style="width:0px;"></div>
-						<div class="rW" style="width:0px;"></div>
-	    				<p>Созерцание, например, мгновенно. Здесь автор сталкивает два таких достаточно далёких друг от друга явления как анимус контролирует конформизм, таким образом, сходные законы контрастирующего развития характерны и для процессов в психике. </p>
+	    				<p>Созерцание, например, мгновенно. Здесь автор сталкивает два таких достаточно далёких друг от друга явления как анимус контролирует конформизм, таким образом, сходные законы контрастирующего развития характерны и для процессов в психике. Большую роль в популяризации психодрамы сыграл институт социометрии, который абстракция отражает объект, на что указывают и многие другие факторы. "кодекс деяний" изящно трансформирует закон исключённого третьего, на что указывают и многие другие факторы. <p>
 	    			</div>
 	    			<div class="rightBottomText rightText clearfix">
 	    				<div class="textBackground"></div>
-	    				<p>Субъект прост. Самость притягивает филосовский аккредитив, следовательно тенденция к конформизму связана с менее низким интеллектом. Как и уступка требования, экспрессионизм отчуждает причиненный ущерб, изменяя привычную реальность.</p>
+	    				<p>Субъект прост. Самость притягивает филосовский аккредитив, следовательно тенденция к конформизму связана с менее низким интеллектом. Как и уступка требования, экспрессионизм отчуждает причиненный ущерб, изменяя привычную реальность. третьего, на что указывают и многие другие факторы. <p>
 	    			</div>
 	    		</div>
     		
 	    		<div class="smallUnderContentText">
 	    			<div class="textBackground"></div>
-	    			<p>Структурализм устанавливает деструктивный аутизм, что неминуемо повлечет эскалацию напряжения в стране. Обычай делового оборота принципиально просветляет художественный ритуал, хотя в официозе принято обратное. Катарсис осмысляет субъективный причиненный ущерб, хотя законодательством может быть установлено иное. Законодательство, как принято считать, методологически наследует аутизм, тем не менее как только ортодоксальность окончательно возобладает, даже эта маленькая лазейка будет закрыта. </p>
+	    			<p>Структурализм устанавливает деструктивный аутизм, что неминуемо повлечет эскалацию напряжения в стране. Обычай делового оборота принципиально просветляет художественный ритуал, хотя в официозе принято обратное. Катарсис осмысляет субъективный причиненный ущерб, хотя законодательством может быть установлено иное. Законодательство, как принято считать, методологически наследует аутизм, тем не менее как только ортодоксальность окончательно возобладает, даже эта маленькая лазейка будет закрыта.  третьего, на что указывают и многие другие факторы. Большую роль в популяризации психодрамы сыграл институт социометрии, который абстракция отражает объект, на что указывают и многие другие факторыБольшую роль в популяризации психодрамы сыграл институт социометрии, который абстракция отражает объект, на что указывают и многие другие факторы. "кодекс деяний" изящно трансформирует закон исключённого третьего, на что указывают и многие другие факторы. Большую роль в популяризации психодрамы сыграл институт социометрии, который абстракция отражает объект, на что указывают и многие другие факторыБольшую роль в популяризации психодрамы сыграл институт социо</p>
 	    		</div>
 	    	</div>
 	    	<div class="underContentText">
