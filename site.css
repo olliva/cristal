@@ -166,8 +166,7 @@ input:-moz-placeholder {
 	height: 631px;
 	position: absolute;
 	margin-top: -480px;
-	background-image:  url(figure.png);
-	background-repeat: no-repeat;
+	background:  url('figure.png') no-repeat;
 	background-position: 40% center;
 	width: 100%;
 
