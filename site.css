@@ -38,6 +38,7 @@ input:focus{
 @font-face {
 	font-family: "Helios Black";
 	src: url('HeliosBlack.otf') format("opentype");
+	src: url(HeliosBlack.ttf) format("truetype");
 }
 
 .lW { float: left; clear: left; height: 15px; }
