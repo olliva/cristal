@@ -214,6 +214,7 @@ input::-ms-input-placeholder{
 	position: relative;
 	float: right;
 	margin-right: 25%;
+	left: 0;
 }
 .content .leftBottomText{
 	width: 41%;
