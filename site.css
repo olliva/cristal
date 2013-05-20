@@ -18,9 +18,6 @@ p{
 .ie10 p{
 	font-size: 11px;
 }
-.ie9 p{
-	font-size: 13px;
-}
 ul{
 	margin:0;
 }
@@ -150,9 +147,6 @@ input::-ms-input-placeholder{
 }
 .ie10 .header .headerMenu ul li{
 	font-size: 15px;
-}
-.ie9 .header .headerMenu ul li{
-	font-size: 17px;
 }
 .header .headerMenu ul li.bigText{
 	line-height: 25px;
@@ -345,8 +339,8 @@ input::-ms-input-placeholder{
 		position: absolute;
 		width: 100%;
 		background-color: white;
-		opacity: 0.3;
-		filter:progid:DXImageTransform.Microsoft.Alpha(opacity=30);
+		opacity: 0.4;
+		filter:progid:DXImageTransform.Microsoft.Alpha(opacity=40);
 	}
 
 	.content .topText{

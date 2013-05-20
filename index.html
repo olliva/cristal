@@ -22,9 +22,6 @@
 		if ($.browser.msie && $.browser.version == 10) {
 			$("html").addClass("ie10");
 		}
-		if ($.browser.msie && $.browser.version == 9) {
-			$("html").addClass("ie9");
-		}
 
 
 		function allignLinesBottom(element, count, className){
@@ -35,7 +32,6 @@
 				element.find(className).first().css({"margin-top": topLeftMarginTop - element.height() + element.find(".text").height() + 67 + "px"});
 			}
 			else if((element.height() > element.find(".text").height()) && (topLeftMarginTop ==0) && (className!=".lW")){
-				//element.find(".text").css({"margin-top": element.height() - element.find(".text").height() - 30 + "px"});
 				$(".backgroundImage").css({"margin-top": $(".backgroundImage").marginTop -  element.height() + element.find(".text").height() + "px"})
 			}
 		}
@@ -59,7 +55,6 @@
 		else{
 			$(".rightTopText").css({"margin-top": 0 + "px"});
 			$(".rightTopText text").css({"margin-top": 0 + "px"});
-
 		}
 		$(".underContentText").html($(".smallUnderContentText").html());
 
@@ -74,7 +69,6 @@
 			else{
 				$(".rightTopText").css({"margin-top": 0 + "px"});
 				$(".rightTopText text").css({"margin-top": 0 + "px"});
-
 			}
 		})
 	});
@@ -86,7 +80,7 @@
 	    	</div>
     		<div class="header">
     			<div class="logo">
-    				Логотип2
+    				Логотип
     			</div>
 				<div class="headerMenu clearfix">
 					<ul>
