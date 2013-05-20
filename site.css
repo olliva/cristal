@@ -16,7 +16,10 @@ p{
     zoom:1;
 }
 .ie10 p{
-	font-size: 10px;
+	font-size: 11px;
+}
+.ie9 p{
+	font-size: 13px;
 }
 ul{
 	margin:0;
@@ -144,7 +147,10 @@ input:-moz-placeholder {
 	vertical-align: middle;
 }
 .ie10 .header .headerMenu ul li{
-	font-size: 14px;
+	font-size: 15px;
+}
+.ie9 .header .headerMenu ul li{
+	font-size: 17px;
 }
 .header .headerMenu ul li.bigText{
 	line-height: 25px;

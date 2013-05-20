@@ -22,6 +22,9 @@
 		if ($.browser.msie && $.browser.version == 10) {
 			$("html").addClass("ie10");
 		}
+		if ($.browser.msie && $.browser.version == 9) {
+			$("html").addClass("ie9");
+		}
 		function allignLinesBottom(element, count, className){
 			var oldTopLeftHeight = element.height();
 			var topLeftMarginTop = element.height() - count*15;
