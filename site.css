@@ -37,7 +37,7 @@ input:focus{
 }*/
 @font-face {
 	font-family: "Helios Black";
-	src: url(HeliosBlack.ttf) format("truetype");
+	src: url('HeliosBlack.otf') format("opentype");
 }
 
 .lW { float: left; clear: left; height: 15px; }
@@ -108,7 +108,7 @@ input::-ms-input-placeholder{
     -o-border-radius: 5px;
 	color: white;
 	text-align: center;
-	font-weight: bolder;
+	
 	font-size: 30px;
 	line-height: 100px;
 	display: inline-block;
