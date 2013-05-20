@@ -186,7 +186,7 @@ input::-ms-input-placeholder{
 	height: 631px;
 	position: absolute;
 	margin-top: -480px;
-	background:  url(sticks.png) no-repeat, url('figure.png') no-repeat;
+	background:  url('sticks.png') no-repeat, url('figure.png') no-repeat;
 	background-position: 40% center;
 	width: 100%;
 
