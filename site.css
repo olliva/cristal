@@ -93,12 +93,6 @@ input::-ms-input-placeholder{
  	border-color: #cccccc;
 	padding: 3px 15px;
 	float: right;
-	/*-moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -o-border-radius: 5px;
-    -khtml-border-radius: 5px;
-	behavior: url("border-radius.htc");
-*/
 }
 
 
@@ -174,19 +168,12 @@ input::-ms-input-placeholder{
 	color: #49d0ee;
 }
 
-.content{
-	/*background: url(sticks.png) no-repeat, url(figure.png) no-repeat;
-	background-position: center;
-	min-height: 631px;
-	margin: 40px 0;
-	position: relative;
-	zoom:1;*/
-}
+
 .backgroundImage{
 	height: 631px;
 	position: absolute;
 	margin-top: -480px;
-	background: transparent url(figure.png) no-repeat;
+	background: transparent url(figureWithSticks.png) no-repeat;
 	background-position: 40% center;
 	width: 100%;
 
@@ -349,7 +336,7 @@ input::-ms-input-placeholder{
 		display: none;
 	}
 	.content{
-		background: url(figure.png) no-repeat;
+		background: transparent url(figure.png) no-repeat;
 		background-position: center;
 		min-height: 631px;
 	}
