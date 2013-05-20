@@ -51,7 +51,7 @@ input::-webkit-input-placeholder {
 	line-height: 12px;
 	font-family: "Trebuchet MS";
 }
-input:-moz-placeholder {
+input::-moz-input-placeholder {
 	font-size: 12px;
 	color: #dadada;
 	font-style: italic;
