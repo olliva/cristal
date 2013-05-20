@@ -38,8 +38,10 @@ input:focus{
 @font-face {
 	font-family: "Helios Black";
 	src: url('HeliosBlack.otf') format("opentype");
-	src: url(HeliosBlack.ttf) format("truetype");
-	src: url(helioscond.eot);
+}
+@font-face {
+	font-family: "Helios IE";
+	src: url(helioscond.bold.eot);
 }
 
 .lW { float: left; clear: left; height: 15px; }
@@ -118,7 +120,9 @@ input::-ms-input-placeholder{
 	*display: inline;
 	font-family: "Helios Black";
 }
-
+.ie .header .logo{
+	font-family: "Helios IE";
+}
 .clearfix:after{
     clear: both;
     content: " ";

@@ -22,6 +22,9 @@
 		if ($.browser.msie && $.browser.version == 10) {
 			$("html").addClass("ie10");
 		}
+		if ($.browser.msie) {
+			$("html").addClass("ie");
+		}
 
 
 		function allignLinesBottom(element, count, className){
