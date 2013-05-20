@@ -33,7 +33,7 @@ input:focus{
 	src: url(Trebuchet.ttf) format("truetype");
 }
 @font-face {
-	font-family: "HeliosBlack";
+	font-family: "MyFont";
 	src: url(Helios-BlackRegular.ttf) format("truetype");
 }
 
@@ -109,7 +109,7 @@ input:-moz-placeholder {
 	display: inline-block;
 	zoom: 1;
 	*display: inline;
-	font-family: "HeliosBlack";
+	font-family: "MyFont";
 }
 
 .clearfix:after{
@@ -166,7 +166,7 @@ input:-moz-placeholder {
 	height: 631px;
 	position: absolute;
 	margin-top: -480px;
-	background:  url('figure.png') no-repeat;
+	background:  url(sticks.png) no-repeat, url('figure.png') no-repeat;
 	background-position: 40% center;
 	width: 100%;
 
@@ -189,7 +189,7 @@ input:-moz-placeholder {
 	float: left;
 }
 .content .rightTopText{
-	width: 26%;
+	width: 27%;
 	text-align: right;
 	position: relative;
 	float: right;
