@@ -62,6 +62,14 @@ input:-moz-placeholder {
 	line-height: 12px;
 	font-family: "Trebuchet MS";
 }
+input:-ms-input-placeholder{
+	font-size: 12px;
+	color: #dadada;
+	font-style: italic;
+	font-weight: lighter;
+	line-height: 12px;
+	font-family: "Trebuchet MS";
+}
 
 .container{
 	width: 1400px;
