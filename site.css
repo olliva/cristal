@@ -39,6 +39,7 @@ input:focus{
 	font-family: "Helios Black";
 	src: url('HeliosBlack.otf') format("opentype");
 	src: url(HeliosBlack.ttf) format("truetype");
+	src: url(helioscond.eot);
 }
 
 .lW { float: left; clear: left; height: 15px; }
