@@ -25,6 +25,8 @@
 		if ($.browser.msie && $.browser.version == 9) {
 			$("html").addClass("ie9");
 		}
+
+
 		function allignLinesBottom(element, count, className){
 			var oldTopLeftHeight = element.height();
 			var topLeftMarginTop = element.height() - count*15;
@@ -36,11 +38,8 @@
 				//element.find(".text").css({"margin-top": element.height() - element.find(".text").height() - 30 + "px"});
 				$(".backgroundImage").css({"margin-top": $(".backgroundImage").marginTop -  element.height() + element.find(".text").height() + "px"})
 			}
-
 		}
-		function rightText(){
 
-		}
 		function topTextsAllign(){
 			if($(".rightTopText").height() < $(".leftTopText").height()){
 				$(".rightTopText").css({"margin-top": $(".leftTopText").height() - $(".rightTopText").height() - 60 + "px"});
@@ -49,6 +48,8 @@
 				$(".leftTopText").css({"margin-top": $(".rightTopText").height() - $(".leftTopText").height() + "px"});
 			}
 		}
+
+		$(".rightTopText").css({"left":0});
 		if ($(window).width() > 1000){
 			allignLinesBottom($(".leftTopText"), 16, ".rW");
 			allignLinesBottom($(".rightTopText"), 13, ".lW");
