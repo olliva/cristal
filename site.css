@@ -39,8 +39,8 @@ input:focus{
 	src: url(Trebuchet.ttf) format("truetype");
 }
 @font-face {
-	font-family: "MyFont";
-	src: url(HelioBlack.ttf) format("truetype");
+	font-family: "Helios Black";
+	src: url(HeliosBlack.ttf) format("truetype");
 }
 
 .lW { float: left; clear: left; height: 15px; }
@@ -117,7 +117,7 @@ input::-ms-input-placeholder{
 	display: inline-block;
 	zoom: 1;
 	*display: inline;
-	font-family: "MyFont";
+	font-family: "Helios Black";
 }
 
 .clearfix:after{
