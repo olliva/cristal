@@ -197,6 +197,8 @@ input::-ms-input-placeholder{
 	z-index: 6;
 	margin-bottom: 135px;
 	margin-top: 60px;
+	zoom: 1;
+	display: inline-block;
 }
 .bottomText{
 	min-height: 180px;
