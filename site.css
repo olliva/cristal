@@ -193,19 +193,19 @@ input::-ms-placeholder{
 	z-index: 5;
 }
 .content .leftTopText{
-	width: 40%;
+	width: 38%;
 	position: relative;
 	float: left;
 	margin-bottom: 80px;
 }
 .content .rightTopText{
-	width: 27%;
+	width: 28%;
 	text-align: right;
 	position: relative;
 	float: right;
 	margin-right: 25%;
 	left: 0;
-	margin-bottom: 90px;
+	margin-bottom: 120px;
 }
 .content .leftBottomText{
 	width: 41%;
