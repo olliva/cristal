@@ -32,7 +32,7 @@
 			var topLeftMarginTop = element.height() - count*15;
 			element.find(className).first().css({"margin-top": topLeftMarginTop + "px"});
 			if((element.height() > element.find(".text").height()) && (topLeftMarginTop !=0)) {
-				element.find(className).first().css({"margin-top": topLeftMarginTop - element.height() + element.find(".text").height() + 67 + "px"});
+				element.find(className).first().css({"margin-top": topLeftMarginTop - element.height() + element.find(".text").height() + 90 + "px"});
 			}
 			else if((element.height() > element.find(".text").height()) && (topLeftMarginTop ==0) && (className!=".lW")){
 				$(".backgroundImage").css({"margin-top": $(".backgroundImage").marginTop -  element.height() + element.find(".text").height() + "px"})
