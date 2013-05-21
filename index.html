@@ -35,7 +35,7 @@
 				element.find(className).first().css({"margin-top": topLeftMarginTop - element.height() + element.find(".text").height() + 90 + "px"});
 			}
 			else if((element.height() > element.find(".text").height()) && (topLeftMarginTop ==0) && (className!=".lW")){
-				$(".backgroundImage").css({"margin-top": $(".backgroundImage").marginTop -  element.height() + element.find(".text").height() + "px"})
+				//element.find(className).first().css({"margin-top":  70 + "px"});
 			}
 		}
 
@@ -50,7 +50,8 @@
 
 		$(".rightTopText").css({"left":0});
 		$(".backgroundImage").css({"left":0});
-		if ($(window).width() > 1000){
+
+		if ($(window).width() > 980){
 			allignLinesBottom($(".leftTopText"), 16, ".rW");
 			allignLinesBottom($(".rightTopText"), 13, ".lW");
 			topTextsAllign();
@@ -64,7 +65,7 @@
 
 		$(window).resize(function(){
 			$(".underContentText").html($(".smallUnderContentText").html());
-			if ($(window).width() > 1000){
+			if ($(window).width() > 980){
 				allignLinesBottom($(".leftTopText"), 16, ".rW");
 				allignLinesBottom($(".rightTopText"), 13, ".lW");
 				topTextsAllign();
@@ -114,7 +115,7 @@
 						<div class="rW" style="width:261px;"></div>
 						<div class="rW" style="width:281px;"></div>
 						<div class="rW" style="width:300px;"></div>
-	    				<div class="text"><p>Большую роль в популяризации психодрамы сыграл институт социометрии, который абстракция отражает объект, на что указывают и многие другие факторы. "кодекс деяний" изящно трансформирует закон исключённого третьего, на что указывают и многие другие факторы.Большую роль в популяризации психодрамы сыграл институт социометрии, который абстракция отражает объект, на что указывают и многие другие факторы. "кодекс деяний" изящно трансформирует закон исключённого третьего, на что указывают и многие другие факторы.  </p></div>
+	    				<div class="text"><p>Большую роль в популяризации психодрамы сыграл институт социометрии, который абстракция отражает объект, на что указывают и многие другие факторы. "кодекс деяний" изящно трансформирует закон исключённого третьего, на что указывают и многие другие факторы Большую роль в популяризации психодрамы сыграл институт социометрии, который абстракция отражает объект, на что указывают и многие другие факторы. "кодекс деяний" изящно трансформирует закон исключённого третьего, на что указывают и многие другие факторы Большую роль в популяризации психодрамы сыграл институт социометрии, который абстракция отражает объект, на что указывают и многие другие факторы. "кодекс деяний" изящно трансформирует закон исключённого третьего, на что указывают и многие другие факторы  </p></div>
 	    			</div>
 	    			<div class="rightTopText rightText clearfix">
 	    				<div class="textBackground"></div>

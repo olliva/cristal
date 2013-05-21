@@ -198,6 +198,7 @@ input::-ms-placeholder{
 	float: left;
 	margin-bottom: 100px;
 }
+
 .content .rightTopText{
 	width: 28%;
 	text-align: right;
@@ -338,7 +339,7 @@ input::-ms-placeholder{
 		display: none;
 	}
 	.content{
-		background: transparent url(figure.png) no-repeat;
+		background: url(figure.png) no-repeat;
 		background-position: center;
 		min-height: 631px;
 	}
