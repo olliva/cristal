@@ -41,7 +41,7 @@ input:focus{
 }
 @font-face {
 	font-family: "Helios IE";
-	src: url(helioscond.bold.eot);
+	src: url(HeliosBlack.eot);
 }
 
 .lW { float: left; clear: left; height: 15px; }
