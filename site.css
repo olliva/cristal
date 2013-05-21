@@ -196,6 +196,7 @@ input::-ms-input-placeholder{
 	width: 40%;
 	position: relative;
 	float: left;
+	margin-bottom: 80px;
 }
 .content .rightTopText{
 	width: 27%;
@@ -204,6 +205,7 @@ input::-ms-input-placeholder{
 	float: right;
 	margin-right: 25%;
 	left: 0;
+	margin-bottom: 90px;
 }
 .content .leftBottomText{
 	width: 41%;
