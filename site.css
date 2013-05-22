@@ -112,7 +112,6 @@ input::-ms-placeholder{
     -o-border-radius: 5px;
 	color: white;
 	text-align: center;
-	
 	font-size: 30px;
 	line-height: 100px;
 	display: inline-block;
@@ -356,8 +355,7 @@ input::-ms-placeholder{
 	}
 	.content{
 		min-height: 631px;
-		background: transparent url(figure.png) no-repeat;
-		background-position: 44% center;
+		background: transparent url(figure.png) no-repeat 44% center;
 		position: relative;
 		zoom:1;
 	}
