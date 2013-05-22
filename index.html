@@ -34,6 +34,9 @@
 			if((element.height() > element.find(".text").height()) && (topLeftMarginTop !=0)) {
 				element.find(className).first().css({"margin-top": topLeftMarginTop - element.height() + element.find(".text").height() + 90 + "px"});
 			}
+			else if((element.height() > element.find(".text").height()) && (topLeftMarginTop !=0) && ($.browser.msie)&& ($.browser.version == 8)) {
+				element.find(className).first().css({"margin-top": topLeftMarginTop - element.height() + element.find(".text").height() + 150 + "px"});
+			}
 			else if((element.height() > element.find(".text").height()) && (topLeftMarginTop ==0) && (className!=".lW")){
 				//element.find(className).first().css({"margin-top":  70 + "px"});
 			}
