@@ -209,7 +209,7 @@ input::-ms-placeholder{
 	float: left;
 	margin-bottom: 100px;
 }
-.ie7 .leftTopText{
+.ie7 .content .leftTopText{
 	width: 30%;
 }
 .content .rightTopText{
