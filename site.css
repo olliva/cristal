@@ -397,6 +397,10 @@ input::-ms-placeholder{
 	.content .rightTopText{
 		margin: 0px;
 	}
+	.ie7 .content .rightTopText,
+	.ie7 .content .leftTopText{
+		width: 49%;
+	}
 	.content .rightText p{
 		padding-left: 10px;
 	}
