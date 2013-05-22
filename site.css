@@ -197,6 +197,7 @@ input::-ms-placeholder{
 }
 .ie7 .topText{
 	padding-bottom: 50px;
+	margin-bottom: 100px;
 }
 .bottomText{
 	min-height: 180px;
