@@ -357,8 +357,8 @@ input::-ms-placeholder{
 	}
 	.content{
 		min-height: 631px;
-		background: url(figure.png) no-repeat;
-		background-position: 44% top;
+		background: transparent url(figure.png) no-repeat;
+		background-position: 44% center;
 		position: relative;
 		zoom:1;
 	}
