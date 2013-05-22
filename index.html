@@ -25,6 +25,9 @@
 		if ($.browser.msie) {
 			$("html").addClass("ie");
 		}
+		if ($.browser.msie && $.browser.version == 7) {
+			$("html").addClass("ie7");
+		}
 
 
 		function allignLinesBottom(element, count, className){
