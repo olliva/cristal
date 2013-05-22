@@ -381,6 +381,9 @@ input::-ms-placeholder{
 		margin-top: 0px;
 		min-height: 0px;
 	}
+	.ie7 .content .topText{
+		padding-bottom: 0;
+	}
 	.content .rightText{
 		width: 49%;
 		position: relative;
