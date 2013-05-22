@@ -361,7 +361,7 @@ input::-ms-placeholder{
 	}
 
 	.ie7 .content{
-		background-image: url(figure.png)!important;
+		background-image: url('figure.png');
 	}
 
 	.smallBackgroundImage{
