@@ -359,6 +359,11 @@ input::-ms-placeholder{
 		position: relative;
 		zoom:1;
 	}
+
+	.ie7 .content{
+		background-image: url(figure.png)!important;
+	}
+
 	.smallBackgroundImage{
 		display: none;
 	}
