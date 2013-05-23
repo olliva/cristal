@@ -80,11 +80,13 @@
 			return $(".input").css('display') != 'none';
 		}
 
-		var lastRecalculateWidth = $(window).width();
+		var lastRecalculateWidth = null;
 
 		function recalculateMargins()
 		{
-			if (lastRecalculateWidth == $(window).width())
+			var currentWidth = $(window).width();
+
+			if (lastRecalculateWidth == currentWidth)
 			{
 				return;
 			} 
@@ -95,6 +97,8 @@
 				allignLinesBottom($(".leftTopText"), 16, ".rW");
 				allignLinesBottom($(".rightTopText"), 13, ".lW");
 			}
+
+			lastRecalculateWidth = currentWidth;
 		}
 
 		$(window).resize(recalculateMargins);
