@@ -345,8 +345,8 @@ input::-ms-placeholder{
 		width: 100%;
 	}
 
-	.backgroundImage{
-		display: none;
+	.ie7 .backgroundImage{
+		display: block;
 	}
 	.content{
 		min-height: 631px;
@@ -355,9 +355,12 @@ input::-ms-placeholder{
 		zoom:1;
 	}
 
+	.ie7 .content{
+		background-image: url('figure.png');
+	}
 
-	.ie7 .smallBackgroundImage{
-		display: block;
+	.smallBackgroundImage{
+		display: none;
 	}
 	.content .textBackground{
 		height: 100%;
