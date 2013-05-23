@@ -345,8 +345,8 @@ input::-ms-placeholder{
 		width: 100%;
 	}
 
-	.ie7 .backgroundImage{
-		display: block;
+	.backgroundImage{
+		display: none;
 	}
 	.content{
 		min-height: 631px;
