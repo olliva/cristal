@@ -166,7 +166,7 @@ input::-ms-placeholder{
 .backgroundImage{
 	height: 631px;
 	position: absolute;
-	margin-top: -500px;
+	margin-top: -480px;
 	background: transparent url(figureWithSticks.png) no-repeat;
 	background-position: 40% center;
 	width: 100%;
@@ -212,7 +212,6 @@ input::-ms-placeholder{
 	float: right;
 	margin-right: 25%;
 	left: 0;
-	margin-bottom: 150px
 }
 .ie7 .content .rightTopText{
 	margin-bottom: 200px;
