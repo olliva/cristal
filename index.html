@@ -17,71 +17,88 @@
 	<!--[if  IE 7]>
     <link rel="stylesheet" type="text/css" href="ie7.css"></link>
 	<![endif]-->
-	<script type="text/javascript">
-	$(function(){
+		<script type="text/javascript">
+	$(function() {
 		if ($.browser.msie && $.browser.version == 10) {
 			$("html").addClass("ie10");
 		}
+
 		if ($.browser.msie) {
 			$("html").addClass("ie");
 		}
+
 		if ($.browser.msie && $.browser.version == 7) {
 			$("html").addClass("ie7");
 		}
 
-
-		function allignLinesBottom(element, count, className){
-			var oldTopLeftHeight = element.height();
-			var topLeftMarginTop = element.height() - count*15;
-			element.find(className).first().css({"margin-top": topLeftMarginTop + "px"});
-			if((element.height() > element.find(".text").height()) && (topLeftMarginTop !=0) && !($.browser.msie)) {
-				element.find(className).first().css({"margin-top": topLeftMarginTop - element.height() + element.find(".text").height() + 90 + "px"});
-
-			}
-			else if((element.height() > element.find(".text").height()) && (topLeftMarginTop !=0) && ($.browser.msie)&& ($.browser.version == 8)) 
-			{
-				element.find(className).first().css({"margin-top": topLeftMarginTop - element.height() + element.find(".text").height() + 150 + "px"});
-
+		/* функция для более точного вычисления отступа сверху для набора выравнивающих линий lW и rW */
+		function setFirstLineMarginTop(element, currentMarginTop, additionalOffset, lineSelector) {
+			if(element.height() > element.find(".text").height() && currentMarginTop != 0) {
+				// todo: эта формула мне совершенно непонятна, нужно написать адекватный коммент
+				element.find(lineSelector).first().css({"margin-top": currentMarginTop - element.height() + element.find(".text").height() + additionalOffset + "px"});
 			}
 		}
 
-		function topTextsAllign(){
-			if($(".rightTopText").height() < $(".leftTopText").height()){
-				$(".rightTopText").css({"margin-top": $(".leftTopText").height() - $(".rightTopText").height() - 60 + "px"});
+		/* функция для "прибивания" линий, описывающих пятиугольник, к низу */
+		function allignLinesBottom(element, count, lineSelector) {
+			var elementHeight = element.height();
+			var firstLineMarginTop = elementHeight - count * 15; // 15 px - высота одной выравнивающей линии
+			element.find(lineSelector).first().css({"margin-top": firstLineMarginTop + "px"});
+
+			// для IE 8 отступ по каким-то причинам другой
+			// возможно потому, что он неправильно интерпретирует border-box
+			var additionalOffset = $.browser.msie && $.browser.version == 8 ? 150 : 90; 
+			alert(additionalOffset);
+			setFirstLineMarginTop(element, firstLineMarginTop, additionalOffset, lineSelector);
+		}
+
+		/* функция, выравнивающая два верхних блока с текстом */
+		function topTextsAllign() {
+			if (!isFullWidth()) {
+				$(".rightTopText").css({"margin-top": 0 + "px"});
+				// todo: зачем постоянно выставлять margin-top 0 этому элементу, 
+				// если нигде больше в коде ему никакой другой margin-top не выставляется?
+				$(".rightTopText text").css({"margin-top": 0 + "px"});
+				return;
 			}
-			else{
+
+			if ($(".rightTopText").height() < $(".leftTopText").height()) {
+				// todo: объяснить, что это за 60 px
+				$(".rightTopText").css({"margin-top": $(".leftTopText").height() - $(".rightTopText").height() - 60 + "px"});
+			} else {
+				// todo: почему здесь берётся высота ".leftTopText .text", а не ".leftTopText" ?
 				$(".leftTopText").css({"margin-top": $(".rightTopText").height() - $(".leftTopText .text").height() + "px"});
 			}
 		}
 
-		$(".rightTopText").css({"left":0});
-		$(".backgroundImage").css({"left":0});
+		function isFullWidth()
+		{
+			// todo: называть класс input'ом ужасно
+			// обязательно переименуй в какой-нибудь searchInput
+			return $(".input").css('display') != 'none';
+		}
 
-		if ($(".input").css('display')!='none') {
-			allignLinesBottom($(".leftTopText"), 16, ".rW");
-			allignLinesBottom($(".rightTopText"), 13, ".lW");
+		function recalculateMargins()
+		{
 			topTextsAllign();
-		}
-		else{
-			$(".rightTopText").css({"margin-top": 0 + "px"});
-			$(".rightTopText text").css({"margin-top": 0 + "px"});
-		}
-		$(".underContentText").html($(".smallUnderContentText").html());
 
-
-		$(window).resize(function(){
-			$(".underContentText").html($(".smallUnderContentText").html());
-			if ($(".input").css('display')!='none') {
+			if (isFullWidth()) {
 				allignLinesBottom($(".leftTopText"), 16, ".rW");
 				allignLinesBottom($(".rightTopText"), 13, ".lW");
-				topTextsAllign();
 			}
-			else{
-				$(".rightTopText").css({"margin-top": 0 + "px"});
-				$(".rightTopText text").css({"margin-top": 0 + "px"});
-			}
-		})
+		}
+
+		$(window).resize(recalculateMargins);
+		recalculateMargins();
+
+		// tood: что это? для чего это? почему не в css?
+		$(".rightTopText").css({"left": 0});
+		$(".backgroundImage").css({"left": 0});
+
+		// дублирование текста в другой контейнер, нужно для адаптивности
+		$(".underContentText").html($(".smallUnderContentText").html());
 	});
+
 	</script>
     <body>
     	<div class="container">
