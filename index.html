@@ -54,10 +54,11 @@
 		$(".rightTopText").css({"left":0});
 		$(".backgroundImage").css({"left":0});
 
-		if ($(".input").css('display')!='none') {
+		if ($(".searchInput").css('display')!='none') {
 			allignLinesBottom($(".leftTopText"), 16, ".rW");
 			allignLinesBottom($(".rightTopText"), 13, ".lW");
 			topTextsAllign();
+
 		}
 		else{
 			$(".rightTopText").css({"margin-top": 0 + "px"});
@@ -68,7 +69,7 @@
 
 		$(window).resize(function(){
 			$(".underContentText").html($(".smallUnderContentText").html());
-			if ($(".input").css('display')!='none') {
+			if ($(".searchInput").css('display')!='none') {
 				allignLinesBottom($(".leftTopText"), 16, ".rW");
 				allignLinesBottom($(".rightTopText"), 13, ".lW");
 				topTextsAllign();
@@ -95,7 +96,7 @@
 		/* функция для более точного вычисления отступа сверху для набора выравнивающих линий lW и rW */
 		function setFirstLineMarginTop(element, currentMarginTop, additionalOffset, lineSelector) {
 			if(element.height() > element.find(".text").height() && currentMarginTop != 0) {
-				/*(текущая высота элемента - высота блока выравнивающих линий) - текущая высота элемента + высота текстового блока + поправка*/
+				//(текущая высота элемента - высота блока выравнивающих линий) - текущая высота элемента + высота текстового блока + поправка
 				element.find(lineSelector).first().css({"margin-top": currentMarginTop - element.height() + element.find(".text").height() + additionalOffset + "px"});
 			}
 		}
@@ -112,7 +113,7 @@
 			setFirstLineMarginTop(element, firstLineMarginTop, additionalOffset, lineSelector);
 		}
 
-		/* функция, выравнивающая два верхних блока с текстом */
+		// функция, выравнивающая два верхних блока с текстом 
 		function topTextsAllign() {
 			if (!isFullWidth()) {
 				$(".rightTopText").css({"margin-top": 0 + "px"});
@@ -212,7 +213,7 @@
 						<div class="lW" style="width:174px;"></div>
 						<div class="lW" style="width:188px;"></div>
 						<div class="lW" style="width:202px;"></div> 
-	    				<div class="text"><p>Тоталитарный тип политической культуры, по определению, слабопроницаем. Понятие политического конфликта амбивалентно. Большую роль в популяризации психодрамы сыграл институт социометрии, который абстракция отражает объект, на что указывают и многие другие факторы.  Большую роль в популяризации психодрамы сыграл институт социометрии, который абстракция отражает объект, на что указывают и многие другие факторы. Большую роль в популяризации психодрамы сыграл институт социометрии, который абстракция отражает объект, на что указывают и многие другие факторы. Большую роль в популяризации психодрамы сыграл институт социометрии, который абстракция отражает объект, на что указывают и многие другие факторы. Большую роль в популяризации пси</p></div>
+	    				<div class="text"><p>Тоталитарный тип политической культуры, по определению, слабопроницаем. Понятие политического конфликта амбивалентно. </p></div>
 	    			</div>
 	    		</div>
 	    		<div class="bottomText clearfix">
