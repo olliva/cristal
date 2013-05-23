@@ -31,12 +31,12 @@
 			$("html").addClass("ie7");
 		}
 
+		var isIe8 = $.browser.msie && $.browser.version == 8;
+
 		/* функция для более точного вычисления отступа сверху для набора выравнивающих линий lW и rW */
 		function setFirstLineMarginTop(element, currentMarginTop, additionalOffset, lineSelector) {
 			if(element.height() > element.find(".text").height() && currentMarginTop != 0) {
 				// todo: эта формула мне совершенно непонятна, нужно написать адекватный коммент
-
-				$('body').append('currentMarginTop ' + currentMarginTop + ' element.height() ' + element.height() + ' element.find(".text").height() ' + element.find(".text").height());
 
 				element.find(lineSelector).first().css({"margin-top": currentMarginTop - element.height() + element.find(".text").height() + additionalOffset + "px"});
 			}
@@ -50,7 +50,7 @@
 
 			// для IE 8 отступ по каким-то причинам другой
 			// возможно потому, что он неправильно интерпретирует border-box
-			var additionalOffset = $.browser.msie && $.browser.version == 8 ? 150 : 90; 
+			var additionalOffset = isIe8 ? 150 : 90; 
 			setFirstLineMarginTop(element, firstLineMarginTop, additionalOffset, lineSelector);
 		}
 
@@ -90,8 +90,8 @@
 			}
 		}
 
-		//$(window).resize(recalculateMargins);
-		recalculateMargins();
+		$(window).resize(recalculateMargins);
+		setTimeout(recalculateMargins, 100);
 
 		// tood: что это? для чего это? почему не в css?
 		$(".rightTopText").css({"left": 0});
