@@ -348,9 +348,6 @@ input::-ms-placeholder{
 	.backgroundImage{
 		display: none;
 	}
-	.ie7 .backgroundImage{
-		display: none;
-	}
 	.content{
 		min-height: 631px;
 		background: transparent url(figure.png) no-repeat 44% center;
