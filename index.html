@@ -19,7 +19,7 @@
 	<![endif]-->
 	<script type="text/javascript">
 	$(function(){
-		if ($.browser.msie && $.browser.version == 10) {
+		/*if ($.browser.msie && $.browser.version == 10) {
 			$("html").addClass("ie10");
 		}
 		if ($.browser.msie) {
@@ -29,19 +29,16 @@
 			$("html").addClass("ie7");
 		}
 
-
 		function allignLinesBottom(element, count, className){
-			var oldTopLeftHeight = element.height();
 			var topLeftMarginTop = element.height() - count*15;
 			element.find(className).first().css({"margin-top": topLeftMarginTop + "px"});
-			if((element.height() > element.find(".text").height()) && (topLeftMarginTop !=0) && !($.browser.msie)) {
+			if((element.height() > element.find(".text").height()) && (topLeftMarginTop !=0) && ($.browser.version != 8)) {
 				element.find(className).first().css({"margin-top": topLeftMarginTop - element.height() + element.find(".text").height() + 90 + "px"});
 
 			}
 			else if((element.height() > element.find(".text").height()) && (topLeftMarginTop !=0) && ($.browser.msie)&& ($.browser.version == 8)) 
 			{
 				element.find(className).first().css({"margin-top": topLeftMarginTop - element.height() + element.find(".text").height() + 150 + "px"});
-
 			}
 		}
 
@@ -80,17 +77,92 @@
 				$(".rightTopText").css({"margin-top": 0 + "px"});
 				$(".rightTopText text").css({"margin-top": 0 + "px"});
 			}
-		})
+		})*/
+
+
+		if ($.browser.msie && $.browser.version == 10) {
+			$("html").addClass("ie10");
+		}
+
+		if ($.browser.msie) {
+			$("html").addClass("ie");
+		}
+
+		if ($.browser.msie && $.browser.version == 7) {
+			$("html").addClass("ie7");
+		}
+
+		/* функция для более точного вычисления отступа сверху для набора выравнивающих линий lW и rW */
+		function setFirstLineMarginTop(element, currentMarginTop, additionalOffset, lineSelector) {
+			if(element.height() > element.find(".text").height() && currentMarginTop != 0) {
+				/*(текущая высота элемента - высота блока выравнивающих линий) - текущая высота элемента + высота текстового блока + поправка*/
+				element.find(lineSelector).first().css({"margin-top": currentMarginTop - element.height() + element.find(".text").height() + additionalOffset + "px"});
+			}
+		}
+
+		/* функция для "прибивания" линий, описывающих пятиугольник, к низу */
+		function allignLinesBottom(element, count, lineSelector) {
+			var elementHeight = element.height();
+			var firstLineMarginTop = elementHeight - count * 15; // 15 px - высота одной выравнивающей линии
+			element.find(lineSelector).first().css({"margin-top": firstLineMarginTop + "px"});
+
+			// для IE 8 отступ по каким-то причинам другой
+			// возможно потому, что он неправильно интерпретирует border-box
+			var additionalOffset = $.browser.msie && $.browser.version == 8 ? 150 : 90; 
+			setFirstLineMarginTop(element, firstLineMarginTop, additionalOffset, lineSelector);
+		}
+
+		/* функция, выравнивающая два верхних блока с текстом */
+		function topTextsAllign() {
+			if (!isFullWidth()) {
+				$(".rightTopText").css({"margin-top": 0 + "px"});
+				return;
+			}
+
+			if ($(".rightTopText").height() < $(".leftTopText").height()) {
+				// 60px - поправка всявязи с очень крутым срезом правого верхнего блока
+				$(".rightTopText").css({"margin-top": $(".leftTopText").height() - $(".rightTopText").height() - 60 + "px"});
+			} else {
+				// "прибивает" левый верхний блок текста к низу, вычисляя отступ как высота правого (большего) блока - высота самого такста, лежащего в левом блоке
+				$(".leftTopText").css({"margin-top": $(".rightTopText").height() - $(".leftTopText .text").height() + "px"});
+			}
+		}
+
+		function isFullWidth()
+		{
+			// для синхронизации момента перестроения сайта для разных браузеров
+			return $(".searchInput").css('display') != 'none';
+		}
+
+		function recalculateMargins()
+		{
+			topTextsAllign();
+
+			if (isFullWidth()) {
+				allignLinesBottom($(".leftTopText"), 16, ".rW");
+				allignLinesBottom($(".rightTopText"), 13, ".lW");
+			}
+		}
+
+		$(window).resize(recalculateMargins);
+		recalculateMargins();
+
+		// необходимо для ie7, так как по умолчанию он сдвигает фоновую картинку и правый верхний блок такста влево за пределы экрана
+		$(".rightTopText").css({"left": 0});
+		$(".backgroundImage").css({"left": 0});
+
+		// дублирование текста в другой контейнер, нужно для адаптивности
+		$(".underContentText").html($(".smallUnderContentText").html());
 	});
 	</script>
     <body>
     	<div class="container">
-	    	<div class="input clearfix">
+	    	<div class="searchInput clearfix">
 				<input placeholder="поиск"/>
 	    	</div>
     		<div class="header">
     			<div class="logo">
-    				Логотип7
+    				Логотип
     			</div>
 				<div class="headerMenu clearfix">
 					<ul>
@@ -122,7 +194,7 @@
 						<div class="rW" style="width:261px;"></div>
 						<div class="rW" style="width:281px;"></div>
 						<div class="rW" style="width:300px;"></div>
-	    				<div class="text"><p>Большую роль в популяризации психодрамы сыграл институт социометрии, который абстракция отражает объект, на что указывают и многие другие факторы. "кодекс деяний" изящно трансформирует закон исключённого третьего, на что указывают и многие другие факторы Большую роль в популяризации психодрамы сыграл институт социометрии, который абстракция отражает объект, на что указывают и многие другие факторы. "кодекс деяний" изящно трансформирует закон исключённого третьего, на что указывают и многие другие факторы Большую роль в популяризации психодрамы сыграл институт социометрии, который абстракция отражает объект, на что указывают и многие другие факторы. "кодекс деяний" изящно трансформирует закон исключённого третьего, на что указывают и многие другие факторы  </p></div>
+	    				<div class="text"><p>Большую роль в популяризации психодрамы сыграл институт социометрии, который абстракция отражает объект, на что указывают и многие другие факторы.   </p></div>
 	    			</div>
 	    			<div class="rightTopText rightText clearfix">
 	    				<div class="textBackground"></div>
