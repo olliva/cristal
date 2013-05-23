@@ -102,7 +102,8 @@
 		}
 
 		$(window).resize(recalculateMargins);
-		setTimeout(recalculateMargins, 300);
+		/* ie необходимо некоторое время после загрузки, чтобы корректно все посчитать, вероятно */
+		setTimeout(recalculateMargins, isIe8 ? 300 : 1);
 
 		// tood: что это? для чего это? почему не в css?
 		$(".rightTopText").css({"left": 0});
