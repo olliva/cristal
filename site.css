@@ -79,12 +79,12 @@ input::-ms-placeholder{
 	margin-top: 20px
 }
 
-.input{
+.searchInput{
 	position: relative;
 	zoom: 1;
 }
 
-.input input{
+.searchInput input{
 	width: 25%;
 	height: 24px;
 	border-radius: 5px;
@@ -306,7 +306,7 @@ input::-ms-placeholder{
 	.lW, .rW{
 		display: none;
 	}
-	.input{
+	.searchInput{
 		display: none;
 	}
 	.header .logo{
@@ -353,6 +353,9 @@ input::-ms-placeholder{
 	.backgroundImage{
 		display: none;
 	}
+	.ie7 .backgroundImage{
+		display: none;
+	}
 	.content{
 		min-height: 631px;
 		background: transparent url(figure.png) no-repeat 44% center;
@@ -360,12 +363,10 @@ input::-ms-placeholder{
 		zoom:1;
 	}
 
-	.ie7 .content{
-		background-image: url('figure.png');
-	}
 
-	.smallBackgroundImage{
-		display: none;
+
+	.ie7 .smallBackgroundImage{
+		display: block;
 	}
 	.content .textBackground{
 		height: 100%;
@@ -438,8 +439,6 @@ input::-ms-placeholder{
 	.underContentText{
 		display: none;
 	}
-
-
 	.bottomMenu .copyright{
 		margin: 0;
 		width: auto;
