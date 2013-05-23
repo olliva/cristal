@@ -80,8 +80,15 @@
 			return $(".input").css('display') != 'none';
 		}
 
+		var lastRecalculateWidth = $(window).width();
+
 		function recalculateMargins()
 		{
+			if (lastRecalculateWidth == $(window).width())
+			{
+				return;
+			} 
+
 			topTextsAllign();
 
 			if (isFullWidth()) {
