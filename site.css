@@ -11,6 +11,7 @@ p{
     font-size: 12px;
     line-height: 20px;
     color: #585858;
+    line-height: 20px;
     position: relative;
     zoom:1;
 }
@@ -30,7 +31,10 @@ input:focus{
     outline:none;
 }
 
-
+/*@font-face {
+	font-family: "Trebuchet MS";
+	src: url(Trebuchet.ttf) format("truetype");
+}*/
 @font-face {
 	font-family: "Helios Black";
 	src: url('HeliosBlack.otf') format("opentype");
@@ -75,15 +79,16 @@ input::-ms-placeholder{
 	margin-top: 20px
 }
 
-.searchInput{
+.input{
 	position: relative;
 	zoom: 1;
 }
 
-.searchInput input{
+.input input{
 	width: 25%;
 	height: 24px;
 	border-radius: 5px;
+	border: 1px solid #cccccc;
 	border-style:solid;
  	border-width:1px;
  	border-color: #cccccc;
@@ -94,8 +99,8 @@ input::-ms-placeholder{
 
 .header{
 	position: relative;
+	margin-top: 0px;
 	zoom:1;
-
 }
 .header .logo{
 	height: 100px;
@@ -301,7 +306,7 @@ input::-ms-placeholder{
 	.lW, .rW{
 		display: none;
 	}
-	.searchInput{
+	.input{
 		display: none;
 	}
 	.header .logo{
@@ -310,7 +315,7 @@ input::-ms-placeholder{
 	}
 	.header .headerMenu {
 		float: none;
-		display: block;
+		display: inherit;
 		position: relative;
 		zoom:1;
 	}
@@ -385,8 +390,11 @@ input::-ms-placeholder{
 	.content .rightText{
 		width: 49%;
 		position: relative;
+		zoom:1;
+		left: 0;
 		top: 0;
 		text-align: left;
+		overflow: hidden;
 		display: inline-block;
 		zoom: 1;
 		*display: inline;
@@ -416,6 +424,7 @@ input::-ms-placeholder{
 		display: inline-block;
 		zoom: 1;
 		*display: inline;
+		overflow: hidden;
 		margin: 0;
 		margin-right: 1%;
 	}
@@ -454,7 +463,11 @@ input::-ms-placeholder{
 		background-position: center;
 		background-size: 100% auto;
 	}
-	.content .rightText,
+	.content .rightText{
+		float: none;
+		width: 100%;
+		margin-bottom: 50px;
+	}
 	.content .leftText{
 		float: none;
 		width: 100%;
@@ -476,6 +489,10 @@ input::-ms-placeholder{
 		display: block;
 		padding: 7px 0;
 	}
+
+
+
+
 }
 
 
