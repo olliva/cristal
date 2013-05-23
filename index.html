@@ -48,7 +48,6 @@
 			// для IE 8 отступ по каким-то причинам другой
 			// возможно потому, что он неправильно интерпретирует border-box
 			var additionalOffset = $.browser.msie && $.browser.version == 8 ? 150 : 90; 
-			alert(additionalOffset);
 			setFirstLineMarginTop(element, firstLineMarginTop, additionalOffset, lineSelector);
 		}
 
@@ -88,7 +87,7 @@
 			}
 		}
 
-		$(window).resize(recalculateMargins);
+		//$(window).resize(recalculateMargins);
 		recalculateMargins();
 
 		// tood: что это? для чего это? почему не в css?
