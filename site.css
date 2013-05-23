@@ -120,7 +120,7 @@ input::-ms-placeholder{
 	font-family: "Helios Black";
 }
 .ie .header .logo{
-	font-family: "Helios IE";
+	font-family: "Helios IE", "verdana";
 }
 .clearfix:after{
     clear: both;

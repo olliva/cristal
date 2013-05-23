@@ -36,8 +36,7 @@
 		/* функция для более точного вычисления отступа сверху для набора выравнивающих линий lW и rW */
 		function setFirstLineMarginTop(element, currentMarginTop, additionalOffset, lineSelector) {
 			if(element.height() > element.find(".text").height() && currentMarginTop != 0) {
-				// todo: эта формула мне совершенно непонятна, нужно написать адекватный коммент
-
+				//(текущая высота элемента - высота блока выравнивающих линий) - текущая высота элемента + высота текстового блока + поправка
 				element.find(lineSelector).first().css({"margin-top": currentMarginTop - element.height() + element.find(".text").height() + additionalOffset + "px"});
 			}
 		}
@@ -58,25 +57,20 @@
 		function topTextsAllign() {
 			if (!isFullWidth()) {
 				$(".rightTopText").css({"margin-top": 0 + "px"});
-				// todo: зачем постоянно выставлять margin-top 0 этому элементу, 
-				// если нигде больше в коде ему никакой другой margin-top не выставляется?
-				$(".rightTopText text").css({"margin-top": 0 + "px"});
 				return;
 			}
 
 			if ($(".rightTopText").height() < $(".leftTopText").height()) {
-				// todo: объяснить, что это за 60 px
+				// 60px - поправка всявязи с очень крутым срезом правого верхнего блока
 				$(".rightTopText").css({"margin-top": $(".leftTopText").height() - $(".rightTopText").height() - 60 + "px"});
 			} else {
-				// todo: почему здесь берётся высота ".leftTopText .text", а не ".leftTopText" ?
+				// "прибивает" левый верхний блок текста к низу, вычисляя отступ как высота правого (большего) блока - высота самого такста, лежащего в левом блоке
 				$(".leftTopText").css({"margin-top": $(".rightTopText").height() - $(".leftTopText .text").height() + "px"});
 			}
 		}
 
 		function isFullWidth()
 		{
-			// todo: называть класс input'ом ужасно
-			// обязательно переименуй в какой-нибудь searchInput
 			return $(".searchInput").css('display') != 'none';
 		}
 
@@ -105,7 +99,7 @@
 		/* ie необходимо некоторое время после загрузки, чтобы корректно все посчитать, вероятно */
 		setTimeout(recalculateMargins, isIe8 ? 300 : 1);
 
-		// tood: что это? для чего это? почему не в css?
+		// 
 		$(".rightTopText").css({"left": 0});
 		$(".backgroundImage").css({"left": 0});
 
