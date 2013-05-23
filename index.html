@@ -35,6 +35,9 @@
 		function setFirstLineMarginTop(element, currentMarginTop, additionalOffset, lineSelector) {
 			if(element.height() > element.find(".text").height() && currentMarginTop != 0) {
 				// todo: эта формула мне совершенно непонятна, нужно написать адекватный коммент
+
+				$('body').append('currentMarginTop ' + currentMarginTop + ' element.height() ' + element.height() + ' element.find(".text").height() ' + element.find(".text").height());
+
 				element.find(lineSelector).first().css({"margin-top": currentMarginTop - element.height() + element.find(".text").height() + additionalOffset + "px"});
 			}
 		}
