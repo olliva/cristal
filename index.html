@@ -101,7 +101,7 @@
 			lastRecalculateWidth = currentWidth;
 		}
 
-		$(window).resize($.debounce(recalculateMargins, 50));
+		$(window).resize(recalculateMargins);
 		/* ie необходимо некоторое время после загрузки, чтобы корректно все посчитать, вероятно */
 		setTimeout(recalculateMargins, isIe8 ? 300 : 1);
 
